@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- STRUCTURE: HTML describes WHAT is on the page. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>My To-Do List</h1>
+
+    <!-- A form, so pressing Enter also adds a task -->
+    <form id="todo-form">
+      <input id="todo-input" type="text" placeholder="What needs doing?" autocomplete="off" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filter buttons -->
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="done">Done</button>
+    </div>
+
+    <!-- JavaScript fills this list in -->
+    <ul id="todo-list"></ul>
+
+    <footer>
+      <span id="count">0 tasks left</span>
+      <button id="clear-done">Clear done</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
